@@ -1,4 +1,4 @@
-package com.example.weatherdome.ui.place
+package com.example.weatherdome.ui.weather
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations

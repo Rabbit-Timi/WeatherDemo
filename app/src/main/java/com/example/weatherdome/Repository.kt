@@ -1,6 +1,7 @@
 package com.example.weatherdome
 
 import androidx.lifecycle.liveData
+import com.example.weatherdome.logic.dao.PlaceDao
 import com.example.weatherdome.logic.model.Place
 import com.example.weatherdome.logic.model.Weather
 import com.example.weatherdome.logic.network.WeatherNetwork
@@ -53,4 +54,8 @@ object Repository {
         }
         emit(result)
     }
+    //记录选中城市
+    fun savePlace(place : Place) = PlaceDao.savePlace(place)
+    fun getSavedPlace() = PlaceDao.getPlace()
+    fun isPlaceSaved() = PlaceDao.isPlaceSaved()
 }

@@ -32,6 +32,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <Button
+            android:id="@+id/settingBtn"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
     </FrameLayout>
 
     <LinearLayout

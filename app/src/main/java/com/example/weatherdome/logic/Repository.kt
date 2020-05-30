@@ -1,8 +1,10 @@
-package com.example.weatherdome
+package com.example.weatherdome.logic
 
 import androidx.lifecycle.liveData
 import com.example.weatherdome.logic.dao.PlaceDao
+import com.example.weatherdome.logic.dao.SettingDao
 import com.example.weatherdome.logic.model.Place
+import com.example.weatherdome.logic.model.Setting
 import com.example.weatherdome.logic.model.Weather
 import com.example.weatherdome.logic.network.WeatherNetwork
 import kotlinx.coroutines.Dispatchers
@@ -12,6 +14,7 @@ import java.lang.Exception
 import java.lang.RuntimeException
 
 object Repository {
+    //查询城市
     fun searchPlaces(query : String) = liveData(Dispatchers.IO) {
         val result = try{
             val placeResponse = WeatherNetwork.searchPlaces(query)
@@ -58,4 +61,8 @@ object Repository {
     fun savePlace(place : Place) = PlaceDao.savePlace(place)
     fun getSavedPlace() = PlaceDao.getPlace()
     fun isPlaceSaved() = PlaceDao.isPlaceSaved()
+    //记录设置状态
+    fun saveSetting(setting : Setting) = SettingDao.saveSetting(setting)
+    fun getSavedSetting() = SettingDao.getSetting()
+    fun isSettingSaved() = SettingDao.isSettingSaved()
 }

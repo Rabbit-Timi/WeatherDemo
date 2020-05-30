@@ -3,7 +3,7 @@ package com.example.weatherdome.ui.weather
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.example.weatherdome.Repository
+import com.example.weatherdome.logic.Repository
 import com.example.weatherdome.logic.model.Location
 
 class WeatherViewModel : ViewModel() {

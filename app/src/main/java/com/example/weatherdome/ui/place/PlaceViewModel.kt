@@ -1,10 +1,9 @@
 package com.example.weatherdome.ui.place
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.example.weatherdome.Repository
+import com.example.weatherdome.logic.Repository
 import com.example.weatherdome.logic.model.Place
 
 class PlaceViewModel : ViewModel() {
